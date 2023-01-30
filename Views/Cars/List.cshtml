@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Shop1.Data.Models
+@model IEnumerable<Car>
+@{
+    Layout = null;
+}
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewportport" content="width=device-width"/>
+        <title>List</title>
+    </head>
+    <body>
+<h2> Все автомобили</h2>
+    @{
+        foreach(var car in Model)
+        {
+            <div>
+            <h2> Модель @car.name </h2>
+            <p> цена @carPrice.ToString("c") </p>
+            </div>
+        }
+        {
+            
+        }
+    }
+    </body>
+</html>
